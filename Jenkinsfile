@@ -23,7 +23,7 @@ pipeline{
             steps {
                 sh'''
                     . $VENV/bin/activate
-                    pytest greeting/tests/
+                    pytest greeting/tests.py/
                 '''
             }
         }
