@@ -1,0 +1,8 @@
+name: My name
+on: [push]
+jobs:
+  say-my-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say My name
+        run: echo "My name is Kevin!"
