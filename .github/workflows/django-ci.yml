@@ -24,7 +24,11 @@ jobs:
       run: |
         pytest 
         
-    - name: run pylint
-      run: |
-        pip install pylint
-        pylint greeting 
+  linting:
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: run pylint
+        run: |
+          pip install pylint
+          pylint greeting 
