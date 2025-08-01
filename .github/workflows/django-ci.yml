@@ -28,6 +28,15 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
+      - name: Debug directory structure
+        run: |
+          echo "Current path:"
+          pwd
+          echo "Files:"
+          ls -la
+          echo "Greeting contents:"
+          ls -la greeting || echo "greeting directory not found"
+
       - name: run pylint
         run: |
           pip install pylint
