@@ -28,12 +28,8 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-      - name: Debug directory structure
-        run: |
-          echo "Current path:"
-          pwd
-          echo "Top-level directory tree:"
-          find . -type d -print
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: run pylint
         run: |
